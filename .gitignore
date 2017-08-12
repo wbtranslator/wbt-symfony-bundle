@@ -1,0 +1,10 @@
+.idea
+.project
+.classpath
+*.launch
+.settings/
+vendor/
+composer.lock
+.DS_Store
+Thumbs.db
+test/

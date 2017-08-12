@@ -1,0 +1,18 @@
+
+parameters:
+  wbt.api_key: '151fb24eacd76be40d7cac3dd74119f9'
+  wbt.paths: ['Resorces/translations']
+  wbt.locale: '%locale%'
+
+services:
+  wbt.config:
+    class: WBTranslator\Sdk\Config
+    calls:
+      - [setApiKey, ['%wbt.api_key%']]
+      - [setLocale, ['%wbt.locale%']]
+      - [setBasePath, ['%kernel.project_dir%']]
+      - [setLangPaths, ['%wbt.lang_paths%']]
+
+  wbt.sdk:
+    class: WBTranslator\Sdk\WBTranslatorSdk
+    arguments: ['@wbt.config']
