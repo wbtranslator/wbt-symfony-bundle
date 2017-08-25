@@ -24,9 +24,9 @@ class AbstractionsExportCommand extends ContainerAwareCommand
     
         if ($collection) {
             $result = $sdk->translations()->create($collection);
-            $output->writeln('Send ' . !empty($result) ? count($result) : 0 . ' abstractions to WBTranslator');
         }
-        
+
+        $output->writeln('Send ' . !empty($result) ? count($result) : 0 . ' abstractions to WBTranslator');
         $output->writeln('Finish!');
     }
 }

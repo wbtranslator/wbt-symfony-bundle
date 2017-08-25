@@ -1,7 +1,7 @@
 
 parameters:
   wbt.api_key: '151fb24eacd76be40d7cac3dd74119f9'
-  wbt.paths: ['Resorces/translations']
+  wbt.paths: ['Resources/translations']
   wbt.locale: '%locale%'
 
 services:

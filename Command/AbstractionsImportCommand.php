@@ -24,9 +24,9 @@ class AbstractionsImportCommand extends Command
     
         if ($translations) {
             $result = $sdk->locator()->put($translations);
-            $output->writeln('Get ' . count($result) . ' abstractions from WBTranslator');
         }
-    
+
+        $output->writeln('Get ' . (!empty($result) ? count($result) : 0) . ' abstractions from WBTranslator');
         $output->writeln('Finish!');
     }
 }
